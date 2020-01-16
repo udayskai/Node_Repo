@@ -9,7 +9,7 @@ class SongList extends Component{
    
      
      componentDidMount() {
-      axios.get(`http://localhost:4700/songlist`)
+      axios.get(`192.168.0.104:3004/songlist`)
         .then(res => {
           const persons = res.data;
           this.setState({ persons });
