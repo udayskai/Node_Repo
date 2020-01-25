@@ -67,9 +67,10 @@ app.put("/updateSong/:id",(req,res)=>{
 
 //remove songs
 app.delete("/songDelete/:id",((req,res)=>{
-   let data=songsNames.find(item=>item.id==req.params.id);
-   let index=songsNames.indexOf(data);
-   songsNames.splice(index,1)
+   // let data=songsNames.find(item=>item.id==req.params.id);
+   // let index=songsNames.indexOf(data);
+   // console.log(index);
+   songsNames.splice(req.params.id,1)
    res.send(songsNames)
 }))
 
